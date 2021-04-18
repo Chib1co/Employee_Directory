@@ -10,4 +10,6 @@ import axios from "axios";
 
 
 
-export default getEmployees
+export{
+    getEmployees
+}

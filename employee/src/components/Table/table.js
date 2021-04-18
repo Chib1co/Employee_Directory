@@ -1,9 +1,12 @@
 import React from 'react';
 import "./style.css";
 
+
 function Table(props) {
-    console.log(props);
-    <table class="table">
+    const employees = props.employees;
+    // console.log(props.employees);
+    return (
+    <table className="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -14,18 +17,20 @@ function Table(props) {
             </tr>
         </thead>
         <tbody>
-            {props.results.map(result =>
+            {employees.map(employee =>
                 <tr>
                     <td>
-                        <img src={result.picture.thumbnail} alt="profile" />
+                        <img src={employee.picture.thumbnail} alt="profile" />
                     </td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>{employee.name.first}</td>
+                    <td>{employee.name.last}</td>
+                    <td>{employee.email}</td>
+                    <td>{employee.cell}</td>
                 </tr>
             )}
         </tbody>
     </table>
-
+    )
 }
 
 export default Table

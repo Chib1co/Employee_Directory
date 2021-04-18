@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css"
 
-function NavBar(){
+function Navbar(){
 return(
     <ul className="nav nav-tabs">
       <li className="nav-item">
@@ -14,4 +14,4 @@ return(
 )
 }
 
-export default NavBar;
+export default Navbar;

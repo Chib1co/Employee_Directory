@@ -1,17 +1,22 @@
-import React, { Component } from "react";
-import API from "../../utils/API.js";
+import React, { useState, useEffect} from "react";
+import {getEmployees} from "../../utils/API.js";
 import Table from "../Table/table";
 
-class Employees extends Component {
-    state= {
-        employees: []
-         };
-    comeponentDidMount(){
-        API.getEmployees()
-        .then(res => this.setState({employees: res.data.results}))
-        // console.log({employees})
+
+export default function MainContainer() {
+    const[employees, setEmployees] = useState([]);
+    // state= {
+    //     employees: [],
+    //     search: ""
+    //      };
+  
+//switch to useEffect nomore componentDidMoubt
+    useEffect(()=>{
+        getEmployees()
+        .then(res => setEmployees(res.data.results))
         .catch(err => console.log(err))
-    }
+    }, []);
+
 
     // handleInputChange = event => {
     //     this.setState({ search: event.target.value})
@@ -22,15 +27,11 @@ class Employees extends Component {
     //     API.
     // }
 
-    render(){
         return (
             <div>
-                <Table style={{ minHeight: "80%" }}></Table>
+                <Table employees={employees} style={{ minHeight: "80%" }}></Table>
             </div>
         )
-    }
+    
 
 }
-
-
-export default Employees;
