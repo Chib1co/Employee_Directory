@@ -24,6 +24,18 @@ export default function MainContainer() {
         setEmployees(employees.filter(employee => search.indexOf(employee.name.first)> -1 || search.indexOf(employee.name.last)> -1))
     };
 
+    const sortEmail = event => {
+        setEmployees(...employees.sort(function(item1, item2){
+            if(item1.email < item2.emalt){
+                return -1
+            }
+            if(item1.email > item2.email){
+                return 0
+            }
+        })
+        )
+    }
+
     const clearSearch = event => {
         setSearch("");
         getEmployees()
@@ -42,7 +54,7 @@ export default function MainContainer() {
             <div style={{display: "flex", justifyContent: "center",  margin: "auto", color: "gray"}}>
                 <p><small>Hover over the Phone Number or Email to Sort Employees</small></p>
             </div>        
-                <Table employees={employees} style={{ minHeight: "80%" }}></Table>
+                <Table employees={employees} style={{ minHeight: "80%" }} list={employees} sortEmail= {sortEmail}></Table>
             </div>
         )
     

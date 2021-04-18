@@ -9,10 +9,10 @@ function Table(props) {
     <table className="table">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Image</th>
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
-                <th scope="col">Email</th>
+                <th scope="col">Email<button className='filter' onClick={props.sortEmail}><i className="fas fa-filter"></i></button></th>
                 <th scope="col">Phone</th>
             </tr>
         </thead>
