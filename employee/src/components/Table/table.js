@@ -13,7 +13,7 @@ function Table(props) {
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">Email{" "}<button className='filter' onClick={props.sortEmail}><i className="fas fa-sort"></i></button></th>
-                <th scope="col">Phone</th>
+                <th scope="col">Phone{" "}<button className='filter' onClick={props.sortPhone}><i className="fas fa-sort"></i></button></th>
             </tr>
         </thead>
         <tbody>

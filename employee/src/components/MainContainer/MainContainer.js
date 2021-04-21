@@ -34,15 +34,19 @@ export default function MainContainer() {
             }
         })
         setEmployees(new_employees)
-        // setEmployees(...employees.sort(function(item1, item2){
-        //     if(item1.email < item2.emalt){
-        //         return -1
-        //     }
-        //     if(item1.email > item2.email){
-        //         return 0
-        //     }
-        // })
-        // )
+
+    }
+
+    const sortPhone = event => {
+        const phone_employees = employees.sort(function(item1, item2){
+            if(item1.cell < item2.cell){
+                return -1
+            }
+            if(item1.cell> item2.cell){
+                return 0
+            }
+        })
+        setEmployees(phone_employees)
     }
 
     const clearSearch = event => {
@@ -63,7 +67,7 @@ export default function MainContainer() {
             <div style={{display: "flex", justifyContent: "center",  margin: "auto", color: "gray"}}>
                 <p><small>Click sort button next to Email to sorting employees by Email</small></p>
             </div>        
-                <Table employees={employees} style={{ minHeight: "80%" }} list={employees} sortEmail={sortEmail}></Table>
+                <Table employees={employees} style={{ minHeight: "80%" }} list={employees} sortEmail={sortEmail}> sortPhone={sortPhone}</Table>
             </div>
         )
     
