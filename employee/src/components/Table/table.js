@@ -4,7 +4,7 @@ import "./style.css";
 
 function Table(props) {
     const employees = props.employees;
-    // console.log(props.employees);
+     console.log(props.employees);
     return (
     <table className="table">
         <thead>
@@ -12,13 +12,13 @@ function Table(props) {
                 <th scope="col">Image</th>
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
-                <th scope="col">Email<button className='filter' onClick={props.sortEmail}><i className="fas fa-filter"></i></button></th>
+                <th scope="col">Email{" "}<button className='filter' onClick={props.sortEmail}><i className="fas fa-sort"></i></button></th>
                 <th scope="col">Phone</th>
             </tr>
         </thead>
         <tbody>
-            {employees.map(employee =>
-                <tr>
+            {employees.map((employee) =>
+                <tr key={employee.cell} value={employee}>
                     <td>
                         <img src={employee.picture.thumbnail} alt="profile" />
                     </td>
