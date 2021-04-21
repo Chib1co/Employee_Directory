@@ -3,7 +3,7 @@ import "./style.css";
 
 
 function Table(props) {
-    const employees = props.employees;
+    // const employees = props.employees;
      console.log(props.employees);
     return (
     <table className="table">
@@ -17,7 +17,7 @@ function Table(props) {
             </tr>
         </thead>
         <tbody>
-            {employees.map((employee) =>
+            {props.employees.map((employee) =>
                 <tr key={employee.cell} value={employee}>
                     <td>
                         <img src={employee.picture.thumbnail} alt="profile" />

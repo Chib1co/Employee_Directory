@@ -25,15 +25,24 @@ export default function MainContainer() {
     };
 
     const sortEmail = event => {
-        setEmployees(...employees.sort(function(item1, item2){
-            if(item1.email < item2.emalt){
+        const new_employees = employees.sort(function(item1, item2){
+            if(item1.email < item2.email){
                 return -1
             }
             if(item1.email > item2.email){
                 return 0
             }
         })
-        )
+        setEmployees(new_employees)
+        // setEmployees(...employees.sort(function(item1, item2){
+        //     if(item1.email < item2.emalt){
+        //         return -1
+        //     }
+        //     if(item1.email > item2.email){
+        //         return 0
+        //     }
+        // })
+        // )
     }
 
     const clearSearch = event => {
