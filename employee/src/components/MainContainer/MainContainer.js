@@ -30,10 +30,11 @@ export default function MainContainer() {
                 return -1
             }
             if(item1.email > item2.email){
-                return 0
+                return 1
             }
+            return 0
         })
-        setEmployees(new_employees)
+        setEmployees([...new_employees])
 
     }
 
@@ -43,10 +44,11 @@ export default function MainContainer() {
                 return -1
             }
             if(item1.cell> item2.cell){
-                return 0
+                return 1
             }
+            return 0;
         })
-        setEmployees(phone_employees)
+        setEmployees([...phone_employees])
     }
 
     const clearSearch = event => {
@@ -67,7 +69,7 @@ export default function MainContainer() {
             <div style={{display: "flex", justifyContent: "center",  margin: "auto", color: "gray"}}>
                 <p><small>Click sort button next to Email to sorting employees by Email</small></p>
             </div>        
-                <Table employees={employees} style={{ minHeight: "80%" }} list={employees} sortEmail={sortEmail}> sortPhone={sortPhone}</Table>
+                <Table employees={employees} style={{ minHeight: "80%" }} list={employees} sortEmail={sortEmail} sortPhone={sortPhone}> </Table>
             </div>
         )
     
