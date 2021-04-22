@@ -8,10 +8,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-      <li><a href="#Technology">Technology</a></li>
-       <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#Technology">Technology</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#learning">Learning</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#Learning">Learning</a></li>
+    <li><a href="#screenshots">Screen shots</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -44,26 +45,19 @@ npm start
 
 ## Learning
 
-This assignment already provided main functionality, but I had to add offline functionality. Which is using Progressive Web Application (PWA)
+Using React to create employee directory. This is our first assignment using React. It took me a while to understand state, props, and component. Once my head was around, it is simple and very easy to organize but it took me a while for me to get there. 
 
 <!-- LICENSE -->
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshot
+## Screenshots
 
-* Home page
-![Home page](./screenshots/home.png)
+* Employee Table
+![Employee Table](./screenshots/employee-table.png)
 
-* Manifest in application
-![Manifest](./screenshots/manifest.png)
-
-* Service Worker in application
-![Service Worker](./screenshots/service-worker.png)
-
-* indexedDB in application
-![indexsedDB](./screenshots/indexedDB.png)
-
+* Searched by name
+![Searched by name](./screenshots/sorted-byName.png)
 
 
 <!-- CONTACT -->
