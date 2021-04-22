@@ -68,6 +68,6 @@ Tomomi Inoue
 
 Project Link: [https://github.com/Chib1co/Employee_Directory](https://github.com/Chib1co/Employee_Directory)
 
-Deployed page: [https://secret-shore-51741.herokuapp.com/](https://secret-shore-51741.herokuapp.com/)
+Deployed page: [https://chib1co.github.io/Employee_Directory/](https://chib1co.github.io/Employee_Directory/)
 
 
